@@ -1,5 +1,6 @@
 package com.grupp4.studentregistry;
 
+import com.grupp4.studentregistry.service.StudentServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -12,6 +12,7 @@ public class StudentServiceImpl implements StudentService {
 
     private List<Student> studentList = new ArrayList<>();
 
+    //
     static{
         Student student1 = new Student();
         Student student2 = new Student();
@@ -36,26 +37,30 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public void createStudent(Student student) {
+    studentList.add(student);
+    }
+
+    @Override
+    public void updateStudentById(int id, Student student) {
+    studentList.remove(id);
+    student.setId(id);
+    studentList.add(student);
+    }
+
+    @Override
+    public String readAllStudent() {
+        return studentList.stream().toString();
 
     }
 
     @Override
-    public void updateStudent(Student student) {
-
-    }
-
-    @Override
-    public List<Student> readAllStudent() {
-        return null;
-    }
-
-    @Override
-    public Student readStudentById(int id) {
-        return null;
+    public String readStudentById(int id) {
+        return studentList.stream().filter(student -> student.getId() == id).toString();
     }
 
     @Override
     public void deleteStudent(int id) {
+        studentList.remove(id);
 
     }
 
