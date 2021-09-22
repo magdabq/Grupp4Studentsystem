@@ -1,8 +1,8 @@
 package com.grupp4.studentregistry;
 
-import com.grupp4.studentregistry.service.StudentServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
 public class StudentregistryApplication {
